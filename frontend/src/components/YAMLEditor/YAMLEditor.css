@@ -1,0 +1,60 @@
+.yaml-editor-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-panel);
+}
+
+.yaml-editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.yaml-editor-header .title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.yaml-editor-header .title .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--neon-green);
+  transition: all var(--transition-fast);
+}
+
+.yaml-editor-header .title .dot.has-content {
+  box-shadow: 0 0 6px var(--glow-green);
+}
+
+.yaml-editor-header .title .dot.empty {
+  background: var(--text-muted);
+}
+
+.yaml-editor-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow border when typing */
+.yaml-editor-container.typing {
+  box-shadow: inset 0 0 30px rgba(0, 212, 255, 0.05);
+}
+
+.yaml-editor-container.typing::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  z-index: 5;
+  transition: opacity 0.3s ease;
+}

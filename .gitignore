@@ -1,0 +1,22 @@
+node_modules/
+dist/
+.DS_Store
+
+# Secrets — never commit actual .env files with keys
+backend/.env
+frontend/.env.local
+
+# Track .env.production (contains only the backend URL, no secrets)
+# frontend/.env.production is intentionally NOT ignored
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Vite build output
+frontend/dist/
+

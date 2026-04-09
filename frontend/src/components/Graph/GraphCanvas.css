@@ -1,0 +1,99 @@
+.graph-canvas-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.graph-canvas-wrapper .react-flow__background {
+  background: var(--bg-deep) !important;
+}
+
+.graph-canvas-wrapper .react-flow__minimap {
+  background: var(--bg-panel) !important;
+  border-radius: var(--border-radius) !important;
+  border: 1px solid var(--border-subtle) !important;
+  bottom: 12px !important;
+  right: 12px !important;
+}
+
+.graph-canvas-wrapper .react-flow__controls {
+  border-radius: var(--border-radius) !important;
+  border: 1px solid var(--border-subtle) !important;
+  background: var(--bg-panel) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+}
+
+.graph-canvas-wrapper .react-flow__controls button {
+  background: var(--bg-panel) !important;
+  border-color: var(--border-subtle) !important;
+  color: var(--text-secondary) !important;
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.graph-canvas-wrapper .react-flow__controls button:hover {
+  background: var(--bg-hover) !important;
+  color: var(--neon-cyan) !important;
+}
+
+.graph-canvas-wrapper .react-flow__controls button svg {
+  fill: currentColor !important;
+}
+
+/* Empty state */
+.graph-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 16px;
+  user-select: none;
+}
+
+.graph-empty .empty-icon {
+  width: 80px;
+  height: 80px;
+  opacity: 0.25;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.graph-empty h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.graph-empty p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 280px;
+}
+
+.graph-empty kbd {
+  display: inline-block;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-medium);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  margin: 0 2px;
+}
+
+/* Error toast */
+.graph-error {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 0, 110, 0.15);
+  border: 1px solid rgba(255, 0, 110, 0.3);
+  color: var(--neon-pink);
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  font-size: 0.8rem;
+  z-index: 20;
+  animation: fadeInScale 0.3s ease;
+}

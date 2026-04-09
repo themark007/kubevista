@@ -1,0 +1,92 @@
+/* ===== Custom Edge Styles ===== */
+
+/* Traffic / Route edge: animated dashed flow */
+.traffic-edge-path {
+  stroke: var(--neon-pink);
+  stroke-width: 2;
+  stroke-dasharray: 8 4;
+  animation: edgeFlow 0.6s linear infinite;
+  filter: drop-shadow(0 0 3px var(--glow-pink));
+}
+
+/* Manages edge: solid with subtle glow */
+.manages-edge-path {
+  stroke: var(--neon-cyan);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 2px var(--glow-cyan));
+}
+
+/* Mounts / reference edge: dotted thin */
+.mounts-edge-path {
+  stroke: var(--neon-gold);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  opacity: 0.6;
+}
+
+/* Selects edge */
+.selects-edge-path {
+  stroke: var(--neon-purple);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 3;
+  animation: edgeFlow 0.8s linear infinite;
+  filter: drop-shadow(0 0 2px var(--glow-purple));
+}
+
+/* Edge label pill */
+.edge-label-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.55rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+}
+
+.edge-label-pill.routes_to {
+  background: rgba(255, 0, 110, 0.15);
+  color: var(--neon-pink);
+  border: 1px solid rgba(255, 0, 110, 0.3);
+}
+
+.edge-label-pill.manages {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--neon-cyan);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.edge-label-pill.selects {
+  background: rgba(181, 39, 247, 0.1);
+  color: var(--neon-purple);
+  border: 1px solid rgba(181, 39, 247, 0.2);
+}
+
+.edge-label-pill.mounts,
+.edge-label-pill.references {
+  background: rgba(255, 190, 11, 0.1);
+  color: var(--neon-gold);
+  border: 1px solid rgba(255, 190, 11, 0.2);
+}
+
+/* Particles for network flow */
+.edge-particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.edge-particle.traffic {
+  background: var(--neon-pink);
+  box-shadow: 0 0 6px var(--neon-pink), 0 0 12px var(--glow-pink);
+}
+
+/* Dimmed edge */
+.dimmed-edge {
+  opacity: 0.1;
+  transition: opacity var(--transition-medium);
+}

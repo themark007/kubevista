@@ -1,0 +1,54 @@
+:root {
+  /* Backgrounds */
+  --bg-deep: #0a0e27;
+  --bg-panel: #1a1f3a;
+  --bg-secondary: #16213e;
+  --bg-hover: #242b4a;
+  --bg-active: #2a3255;
+
+  /* Neon Accents */
+  --neon-green: #00ff88;
+  --neon-cyan: #00d4ff;
+  --neon-purple: #b527f7;
+  --neon-pink: #ff006e;
+  --neon-gold: #ffbe0b;
+  --neon-blue: #4895ef;
+
+  /* Glow Colors (with alpha) */
+  --glow-green: rgba(0, 255, 136, 0.3);
+  --glow-cyan: rgba(0, 212, 255, 0.3);
+  --glow-purple: rgba(181, 39, 247, 0.3);
+  --glow-pink: rgba(255, 0, 110, 0.3);
+  --glow-gold: rgba(255, 190, 11, 0.3);
+
+  /* Text */
+  --text-primary: #e0e0e0;
+  --text-secondary: #909090;
+  --text-muted: #606080;
+  --text-bright: #ffffff;
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-medium: rgba(255, 255, 255, 0.12);
+
+  /* Status */
+  --status-running: #00ff88;
+  --status-pending: #ffbe0b;
+  --status-error: #ff006e;
+
+  /* Sizing */
+  --toolbar-height: 56px;
+  --panel-min-width: 300px;
+  --detail-panel-width: 340px;
+  --border-radius: 8px;
+  --border-radius-lg: 12px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-medium: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* Font */
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
