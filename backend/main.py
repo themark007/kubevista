@@ -1,6 +1,6 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, Response
 from dotenv import load_dotenv
 
 from models import ParseRequest
@@ -83,6 +83,19 @@ async def explain_manifests(req: ParseRequest):
         headers={
             "Cache-Control": "no-cache",
             "Connection": "keep-alive",
+        },
+    )
+
+
+@app.options("/{rest_of_path:path}")
+async def preflight(rest_of_path: str, request: Request):
+    return Response(
+        status_code=200,
+        headers={
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, Accept",
+            "Access-Control-Max-Age": "86400",
         },
     )
 
