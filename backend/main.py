@@ -15,14 +15,10 @@ load_dotenv()
 
 app = FastAPI(title="KubeVista API", version="1.0.0")
 
-# Build CORS origins: local defaults + any extra origins from CORS_ORIGINS env var
-_extra = [o.strip() for o in os.getenv("CORS_ORIGINS", "").split(",") if o.strip()]
-_allowed_origins = ["http://localhost:5173", "http://localhost:3000"] + _extra
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=_allowed_origins,
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
